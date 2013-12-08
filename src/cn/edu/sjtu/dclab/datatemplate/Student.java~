@@ -1,0 +1,59 @@
+//package cn.edu.sjtu.dclab.datatemplate;
+package cn.edu.sjtu.dclab.datatemplate;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import cn.edu.sjtu.dclab.urlutil.Urlstr;
+import cn.edu.sjtu.dclab.urlutil.Urlutil;
+
+public class Student {
+	private static final String url = Urlstr.url;
+	
+	private String NAME;
+	private int UID;
+	private int ID;
+	
+	public User(JSONObject obJson)
+	{
+		try {
+					this.setNAME(obJson.getString("String"));
+					this.setUID(obJson.getInt("int"));
+					this.setID(obJson.getInt("int"));
+				} catch (JSONException e) {
+			// TODO: handle exception
+		}
+	}
+	
+	public void setNAME(String NAME)
+	{
+		this.NAME = NAME;
+	}
+
+	public String getNAME()
+	{
+		return this.NAME;
+	}
+	public void setUID(int UID)
+	{
+		this.UID = UID;
+	}
+
+	public int getUID()
+	{
+		return this.UID;
+	}
+	public void setID(int ID)
+	{
+		this.ID = ID;
+	}
+
+	public int getID()
+	{
+		return this.ID;
+	}
+}

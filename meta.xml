@@ -1,0 +1,33 @@
+<table>
+	<name>STUDENT</name>
+	<userid>1</userid>
+	<username>KRASUS</username>
+	<columnlist>
+		<column>
+			<name>ID</name>
+			<type>BIGINT</type>
+			<length></length>
+			<notnull>TRUE</notnull>
+			<primarykey>TRUE</primarykey>
+		</column>
+		<column>
+			<name>NAME</name>
+			<type>VARCHAR</type>
+			<length>30</length>
+		</column>
+		<column>
+			<name>UID</name>
+			<type>BIGINT</type>
+			<length></length>
+			<reference>
+				<tablename>USER</tablename>
+				<cascade>DELETE</cascade>
+			</reference>
+		</column>
+	</columnlist>
+	<server>
+		<url>jdbc:mysql://localhost:3306/meta</url>
+		<user>root</user>
+		<password>root</password>
+	</server>
+</table>
